@@ -1,5 +1,5 @@
-# exel-course-project
-Webpack (imports/exports)
+	# exel-course-project
+	Webpack (imports/exports)
 	Babel
 	Scss
 	Eslint
@@ -8,7 +8,7 @@ Webpack (imports/exports)
 			Dev Server, SourceMaps, Eslint, Not Minified JS & CSS
 		- Prod
 			Minified Code
-Git
+	Git
 
 	Production
 		2.0.0
