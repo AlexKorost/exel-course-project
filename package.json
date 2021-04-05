@@ -1,5 +1,5 @@
 {
-  "name": "excel-course",
+  "name": "exel-course-project",
   "version": "1.0.0",
   "description": "Pure JavaScript Excel Application",
   "main": "webpack.config.js",
@@ -10,22 +10,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vladilenm/excel-course.git"
+    "url": "git+https://github.com/AlexKorost/exel-course-project.git"
   },
   "keywords": [
     "js",
     "javascript",
+    "html",
+    "scss",
     "excel"
   ],
-  "author": "Vladilen Minin <vladilen.minin@gmail.com>",
+  "author": "Aleksandr Korost <alex.farok.korost@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vladilenm/excel-course/issues"
+    "url": "https://github.com/AlexKorost/exel-course-project/issues"
   },
-  "homepage": "https://github.com/vladilenm/excel-course#readme",
-  "private": true,
+  "homepage": "https://github.com/AlexKorost/exel-course-project#readme",
   "devDependencies": {
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0"
   }
 }
