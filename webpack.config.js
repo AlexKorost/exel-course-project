@@ -12,10 +12,10 @@ const filename = ext => isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`
 module.exports = {
     context: path.resolve(__dirname,'src'),
     mode: 'development',
-    entry: './index.js',
+    entry: ["@babel/polyfill", './index.js'],
     output: {
         filename: filename( 'js'),
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
     },
     resolve: {
         extensions: ['.js'],
@@ -24,11 +24,12 @@ module.exports = {
             '@core': path.resolve(__dirname, 'core')
         }
     },
+    target: process.env.NODE_ENV === "development" ? "web" : "browserslist",
     devtool: isDev ? 'source-map' :false,
     devServer: {
         port: 4200,
-        contentBase: path.join(__dirname, 'dist'),
-        hot: isDev,
+        static: path.join(__dirname, 'dist'),
+        hot: isDev
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -48,13 +49,17 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: filename( 'css')
         }),
+
     ],
     module: {
         rules: [
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {loader: MiniCssExtractPlugin.loader,
+                        options: {
+                        }
+                    },
                     "css-loader",
                     "sass-loader"
                 ],
